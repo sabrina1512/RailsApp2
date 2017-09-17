@@ -12,6 +12,12 @@ h2 {
 	padding-right: 10px;
 }
 
+.item img {
+  width: 500px; // or any other value you'd like
+  max-width: 100%; // this is so that on mobile it never exceeds the full width of the screen
+  margin: 0 auto; // this is to center the image horizontally
+}
+
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
