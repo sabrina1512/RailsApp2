@@ -71,4 +71,13 @@ class ProductsController < ApplicationController
     def product_params
       params.require(:product).permit(:name, :description, :image_url, :colour, :price)
     end
+
+    def index
+      if params[:q]
+        search_term = params[:q]
+        @products = Product.search(search_term)
+      else
+        @products = Product.all
+      end
+    end
 end

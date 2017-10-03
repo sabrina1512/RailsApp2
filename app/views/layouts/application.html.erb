@@ -30,6 +30,11 @@
           <li><%= link_to 'Contact', static_pages_contact_path %></a></li>
           <li><%= link_to 'About', static_pages_about_path %></a></li>
           <li><%= link_to 'Products', products_path %></a></li>
+          <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
+          <%= form.label :q, 'Search for:' %>
+          <%= form.text_field :q, id: 'q', value: params[:q] %>
+          <%= form.submit 'Search' %>
+          <% end %>
         </ul>
       </div> <!-- end navbar-->
     </nav> <!-- end navbar-->
@@ -41,3 +46,5 @@
 		</footer>
   </body>
 </html>
+
+
