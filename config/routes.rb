@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   root 'static_pages#index'
   resources :orders, only: [:index, :show, :create, :destroy]
 
+  post 'static_pages/thank_you'
+  
   def create
   @product = Product.new(product_params)
 
