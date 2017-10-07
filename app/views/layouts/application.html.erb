@@ -12,7 +12,13 @@
 
   <body>
   <p class="notice"><%= notice %></p>
+    <% if notice %>
+      <p id="notice" class="alert alert-info"><%= notice %></p>
+    <% end %>
   <p class="alert"><%= alert %></p>
+    <% if alert %>
+      <p id="alert" class="alert alert-info"><%= alert %></p>
+  <% end %>
     <!-- navbar-->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="navbar-header">
